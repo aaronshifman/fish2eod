@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Parameter Sweeps &mdash; fish2eod 0.2.2b documentation</title>
@@ -177,12 +178,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="parameter-sweeps">
+  <section id="parameter-sweeps">
 <h1>Parameter Sweeps<a class="headerlink" href="#parameter-sweeps" title="Permalink to this headline">¶</a></h1>
 <p>If you’ve used <em>Comsol</em> before you’ll be familiar with the notion of a parameter sweep: specify one model and then run
 it several times for many combinations of parameters.</p>
 <p>We start the parameter sweep by defining a <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.ParameterSet" title="fish2eod.sweep.ParameterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterSet</span></code></a></p>
-<div class="section" id="parameter-sets">
+<section id="parameter-sets">
 <h2>Parameter Sets<a class="headerlink" href="#parameter-sets" title="Permalink to this headline">¶</a></h2>
 <p>Parameter sets define a set of parameters which are swept together. For example if you wanted to move the fish it’s
 <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> cooridinates would have to sweep together. When parameters are swept together we refer this is a serial
@@ -224,8 +225,8 @@ parameters in a <a class="reference internal" href="../../api/fish2eod.html#fish
 <li><p>(2, “q”)</p></li>
 <li><p>(3, -3.14)</p></li>
 </ul>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2>Parameter Sweeps<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.ParameterSweep" title="fish2eod.sweep.ParameterSweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterSweep</span></code></a> takes one or more <code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterSets</span></code> and arranges them optimally. When specifying multiple sets they
 are swept combinatorially (i.e. the cartesian product of the sets, or every combination of the 2 or more). The
@@ -272,8 +273,8 @@ are swept combinatorially (i.e. the cartesian product of the sets, or every comb
 <li><p>(3, -3.14, “b”)</p></li>
 </ul>
 <p>You’ll notice that set_1 is iterated before set_2 meaning that only 2 remeshes need to occur instead of 8</p>
-</div>
-<div class="section" id="running-parameter-sweeps">
+</section>
+<section id="running-parameter-sweeps">
 <h2>Running Parameter Sweeps<a class="headerlink" href="#running-parameter-sweeps" title="Permalink to this headline">¶</a></h2>
 <p>Creating a <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.ParameterSweep" title="fish2eod.sweep.ParameterSweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterSweep</span></code></a> is the precursor to running the sweep.</p>
 <p>Sweeps are run using an <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.IterativeSolver" title="fish2eod.sweep.IterativeSolver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a>. In this example we will move an object around beside the fish</p>
@@ -315,13 +316,13 @@ are swept combinatorially (i.e. the cartesian product of the sets, or every comb
 <p>Importantly with an <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.IterativeSolver" title="fish2eod.sweep.IterativeSolver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a> some parameters may need to be specified but not part of the sweep
 (fish coordinates in this example). Any fixed parameters may be specified in the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.IterativeSolver" title="fish2eod.sweep.IterativeSolver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a> by adding them
 as parameters as you would for a <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model" title="fish2eod.models.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a> constructor</p>
-</div>
-<div class="section" id="special-parameter-sets">
+</section>
+<section id="special-parameter-sets">
 <h2>Special Parameter Sets<a class="headerlink" href="#special-parameter-sets" title="Permalink to this headline">¶</a></h2>
 <p>To make life easy for basic parameter sets we provied classes for specifing sweeps over eod phase (<a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.EODPhase" title="fish2eod.sweep.EODPhase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EODPhase</span></code></a>) and
 fish coordinates (<a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.FishPosition" title="fish2eod.sweep.FishPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FishPosition</span></code></a>). Please read their documentations for use case.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

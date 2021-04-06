@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Basics &mdash; fish2eod 0.2.2b documentation</title>
@@ -176,7 +177,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="basics">
+  <section id="basics">
 <h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial assumes that you’ve already read the <span class="xref std std-doc">Basic tutorial</span>. We will use a common model of
 a fish with an object near the head. The details are not important as all <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model" title="fish2eod.models.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a> descendants will behave similarly.</p>
@@ -214,7 +215,7 @@ is the outline which is outline = 1 if an edge describes the geometry outline an
 </dl>
 </li>
 </ul>
-<div class="section" id="plot-solution">
+<section id="plot-solution">
 <h2>Plot Solution<a class="headerlink" href="#plot-solution" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">solution</span></code> field contains the “most resent” simulation result. I.e. the voltage from the EOD (note however that if
 the field perturbation is computed to compute the electric image them <code class="docutils literal notranslate"><span class="pre">solution</span></code> is the field perturbation and an
@@ -249,12 +250,12 @@ additional variable <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/plotting/code/basic_solution_plot.py">Source code</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_solution_plot.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_solution_plot.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_solution_plot.pdf">pdf</a>)</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/basic_solution_plot.png" src="../../_images/basic_solution_plot.png" />
-</div>
+</figure>
 <p>Here where we specify the “solution” variable we could have used any valid 2D function.</p>
-</div>
-<div class="section" id="plot-outline">
+</section>
+<section id="plot-outline">
 <h2>Plot Outline<a class="headerlink" href="#plot-outline" title="Permalink to this headline">¶</a></h2>
 <p>Technically the outline can be computed from a 1D plot - however we’ve provided a helper function to do so. All thats
 needed is to call the <a class="reference internal" href="../../api/fish2eod.analysis.html#fish2eod.analysis.plotting.plot_outline" title="fish2eod.analysis.plotting.plot_outline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_outline</span></code></a> function.</p>
@@ -288,11 +289,11 @@ needed is to call the <a class="reference internal" href="../../api/fish2eod.ana
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/plotting/code/basic_outline_plot.py">Source code</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_outline_plot.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_outline_plot.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_outline_plot.pdf">pdf</a>)</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/basic_outline_plot.png" src="../../_images/basic_outline_plot.png" />
-</div>
-</div>
-<div class="section" id="masking">
+</figure>
+</section>
+<section id="masking">
 <h2>Masking<a class="headerlink" href="#masking" title="Permalink to this headline">¶</a></h2>
 <p>In many cases some information is included in the plot that you don’t want. For example inside the fish is usually
 “not interesting” so this can be masked out.</p>
@@ -339,18 +340,22 @@ needed is to call the <a class="reference internal" href="../../api/fish2eod.ana
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/plotting/code/basic_mask.py">Source code</a>)</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <img alt="../../_images/basic_mask_00.png" src="../../_images/basic_mask_00.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id2">
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
 <img alt="../../_images/basic_mask_01.png" src="../../_images/basic_mask_01.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_mask_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Additionally it may be more convenient to set a certain domain to be ommitted rather than have a long list of included
 domains. For this reason we provide an <code class="docutils literal notranslate"><span class="pre">include</span></code> flag to set whether the mask is inclusive or exclusive.</p>
-</div>
-<div class="section" id="sweeps">
+</section>
+<section id="sweeps">
 <h2>Sweeps<a class="headerlink" href="#sweeps" title="Permalink to this headline">¶</a></h2>
 <p>Plotting during sweeps is almost the same as for regular plotting. You just need to specify the sweep parameter values</p>
 <p>Note that because of the way matplotlib works we cannot pass properties as <code class="docutils literal notranslate"><span class="pre">prop_0</span> <span class="pre">=</span> <span class="pre">0</span></code> but we need to specify the
@@ -414,24 +419,32 @@ other flags and settings.</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot.py">Source code</a>)</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="../../_images/basic_sweep_plot_00.png" src="../../_images/basic_sweep_plot_00.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.pdf">pdf</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id4">
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_00.pdf">pdf</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
 <img alt="../../_images/basic_sweep_plot_01.png" src="../../_images/basic_sweep_plot_01.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.pdf">pdf</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id5">
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_01.pdf">pdf</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
 <img alt="../../_images/basic_sweep_plot_02.png" src="../../_images/basic_sweep_plot_02.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.pdf">pdf</a>)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id6">
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_02.pdf">pdf</a>)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
 <img alt="../../_images/basic_sweep_plot_03.png" src="../../_images/basic_sweep_plot_03.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.pdf">pdf</a>)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.png">png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/plotting/code/basic_sweep_plot_03.pdf">pdf</a>)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
 
            </div>

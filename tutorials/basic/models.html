@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Models &mdash; fish2eod 0.2.2b documentation</title>
@@ -178,12 +179,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="models">
+  <section id="models">
 <h1>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h1>
 <p>In fish2eod a model is the physical description of the scientific setup. It defines what the objects are and where they
 are located. This could be a tank of water or a fish or an electrode. Additionally it defines their physical properties.</p>
 <p>For users familiar with <em>Comsol</em>, a model is analagous to a <em>mph</em> file where the geometry and physics are defined.</p>
-<div class="section" id="an-aside-on-classes">
+<section id="an-aside-on-classes">
 <h2>An aside on classes<a class="headerlink" href="#an-aside-on-classes" title="Permalink to this headline">¶</a></h2>
 <p>In programming a <em>class</em> is a collection of methods (functions) and data. In fish2eod a model is created as a class. The
 reason for this is something called inheritance. A sub-class i.e. a child class <em>inherits</em> all its data and behaviour
@@ -216,11 +217,11 @@ the freedom to inject whatever code you want wherever. On the other hand you don
 for computing domains, or boundaries, or meshes, or the electric field physics. Subclassing a model allows you to
 inherit all of that behaviour - while being able to overwrite some behaviour like <a class="reference internal" href="geometry.html"><span class="doc">defining geometry</span></a>
 or <a class="reference internal" href="domains.html#bc-intro"><span class="std std-ref">boundary conditions</span></a>.</p>
-</div>
-<div class="section" id="subclassing-models">
+</section>
+<section id="subclassing-models">
 <h2>Subclassing Models<a class="headerlink" href="#subclassing-models" title="Permalink to this headline">¶</a></h2>
 <p>fish2eod comes with several classes of models. However for most users only one will be of interest.</p>
-<div class="section" id="basefishmodel">
+<section id="basefishmodel">
 <h3>BaseFishModel<a class="headerlink" href="#basefishmodel" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.BaseFishModel" title="fish2eod.models.BaseFishModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseFishModel</span></code></a> is the base model for any fish based model. It provides a fish, a ground electrode and a tank of
 water - all with editable properties. Additionally it pre-populates the physics with the details of all of the objects
@@ -251,9 +252,9 @@ sources. These are the <a class="reference internal" href="../../api/fish2eod.ht
         <span class="n">VOLTAGE</span><span class="o">-</span><span class="n">SOURCE</span><span class="o">-</span><span class="n">IMPLEMENTATION</span><span class="o">-</span><span class="n">HERE</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

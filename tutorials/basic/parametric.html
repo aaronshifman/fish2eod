@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Paramaterizing Models &mdash; fish2eod 0.2.2b documentation</title>
@@ -178,12 +179,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="paramaterizing-models">
+  <section id="paramaterizing-models">
 <h1>Paramaterizing Models<a class="headerlink" href="#paramaterizing-models" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial assumes that you’ve already read the <a class="reference internal" href="domains.html"><span class="doc">domains tutorial</span></a>.</p>
 <p>Generally speaking you will never make one model. You may be interested in multiple object conductances or object
 locations. Instead of making 10 models for each object you can simply parameterize them.</p>
-<div class="section" id="parameterizing-functions">
+<section id="parameterizing-functions">
 <h2>Parameterizing Functions<a class="headerlink" href="#parameterizing-functions" title="Permalink to this headline">¶</a></h2>
 <p>There are 3 parameterizable methods in the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.BaseFishModel" title="fish2eod.models.BaseFishModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseFishModel</span></code></a></p>
 <ol class="arabic simple">
@@ -244,14 +245,18 @@ locations. Instead of making 10 models for each object you can simply parameteri
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/parametric_object.py">Source code</a>)</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <img alt="../../_images/parametric_object_00.png" src="../../_images/parametric_object_00.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/parametric_object_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id2">
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/parametric_object_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
 <img alt="../../_images/parametric_object_01.png" src="../../_images/parametric_object_01.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/parametric_object_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/parametric_object_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/parametric_object_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>As you can see we’ve added two parameters to the model <code class="docutils literal notranslate"><span class="pre">object_x</span></code> and <code class="docutils literal notranslate"><span class="pre">object_y</span></code>. We set parameters with a parameter
 dictionary with all necessary parameters included in it. The <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.BaseFishModel" title="fish2eod.models.BaseFishModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseFishModel</span></code></a> has two required parameters: <code class="docutils literal notranslate"><span class="pre">fish_x</span></code>
 and <code class="docutils literal notranslate"><span class="pre">fish_y</span></code>. These two parameters are lists of points which define the x and y coordinates of the spine. For this
@@ -264,8 +269,8 @@ or as few as you’d like. For example the radius could also be parameterized.</
 <p>As an additional note: the same parameter can be used in more than one place just by adding the same name. You do not
 need to redefine parameters.</p>
 </div>
-</div>
-<div class="section" id="fish-position-parameters">
+</section>
+<section id="fish-position-parameters">
 <h2>Fish Position Parameters<a class="headerlink" href="#fish-position-parameters" title="Permalink to this headline">¶</a></h2>
 <p>The only requirement for the points is that they are in rostro-caudal order and the midline does not self-intersect.</p>
 <p>To highlight the flexibility we will create a 45cm fish with it’s head at (-30, -30), an exponential body, and rotated
@@ -322,13 +327,13 @@ by 45°.</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/base_fish_model_fish_position.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_fish_position.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_fish_position.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_fish_position.pdf">pdf</a>)</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/base_fish_model_fish_position.png" src="../../_images/base_fish_model_fish_position.png" />
-</div>
+</figure>
 <p>While this code may look complicated, the majority of the code is purely used to compute the coordinates for the fish
 body. All of the <code class="docutils literal notranslate"><span class="pre">compute_coordinates</span></code> function is doing that role.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
