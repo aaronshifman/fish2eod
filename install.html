@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Installation &mdash; fish2eod 0.2.2b documentation</title>
@@ -183,9 +182,9 @@
 </div>
 <p>Please remember that you must be in the correct conda environment</p>
 </div>
-<section id="installation">
+<div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<section id="linux">
+<div class="section" id="linux">
 <span id="linux-install"></span><h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>Formally fish2eod has only been tested with Ubuntu 18.04. This is because there is a gmsh requirement &gt;= 3.0 and
 previous versions of Ubuntu have an out of date version on apt. If you can install gmsh separately any version should
@@ -199,7 +198,7 @@ curl https://raw.githubusercontent.com/aaronshifman/fish2eod/master/install_cond
 curl https://raw.githubusercontent.com/aaronshifman/fish2eod/master/install_linux.sh -L --output install_linux.sh
 </pre></div>
 </div>
-<section id="setup">
+<div class="section" id="setup">
 <h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
 <p>Make sure your package manager is up to date: Open your terminal and type</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade
@@ -216,8 +215,8 @@ curl https://raw.githubusercontent.com/aaronshifman/fish2eod/master/install_linu
 </div>
 <img alt="_images/install_update4.png" src="_images/install_update4.png" />
 <p>Again you’ll be prompted to press <code class="docutils literal notranslate"><span class="pre">Y</span></code> to continue</p>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>To install fish2eod simply run (replace <code class="docutils literal notranslate"><span class="pre">3.6</span></code> with <code class="docutils literal notranslate"><span class="pre">3.7</span></code> if you’d prefer python3.7. <code class="docutils literal notranslate"><span class="pre">LOCATION-OF-SOURCE</span></code> is the
 path to the files you downloaded earlier. In my case its under <code class="docutils literal notranslate"><span class="pre">/mnt/f/Documents/example</span></code>.</p>
@@ -235,9 +234,9 @@ pytest --pyargs fish2eod
 <p>(Note there are currently plans to add this to pypi but that’s for a later date)</p>
 <p>Now there’s likely to be a large number of warnings about various things these are completely fine as long as you don’t
 see a big red bar or error messages the tests went smoothly.</p>
-</section>
-</section>
-<section id="maxos">
+</div>
+</div>
+<div class="section" id="maxos">
 <h2>MaxOS<a class="headerlink" href="#maxos" title="Permalink to this headline">¶</a></h2>
 <p>fish2eod has only been tested on OSX but  most versions should work.</p>
 <p>You’re going to want to download the <a class="reference download external" download="" href="https://raw.githubusercontent.com/aaronshifman/fish2eod/master/conda_environment.yml"><code class="xref download docutils literal notranslate"><span class="pre">conda</span> <span class="pre">specification</span></code></a>
@@ -249,7 +248,7 @@ curl https://raw.githubusercontent.com/aaronshifman/fish2eod/master/install_cond
 curl https://raw.githubusercontent.com/aaronshifman/fish2eod/master/install_macos.sh -L --output install_macos.sh
 </pre></div>
 </div>
-<section id="id2">
+<div class="section" id="id2">
 <h3>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>To install fish2eod simply run (replace <code class="docutils literal notranslate"><span class="pre">3.6</span></code> with <code class="docutils literal notranslate"><span class="pre">3.7</span></code> if you’d prefer python3.7. <code class="docutils literal notranslate"><span class="pre">LOCATION-OF-SOURCE</span></code> is the
 path to the files you downloaded earlier. In my case its under <code class="docutils literal notranslate"><span class="pre">/mnt/f/Documents/example</span></code>.</p>
@@ -267,11 +266,11 @@ pytest --pyargs fish2eod
 <p>(Note there are currently plans to add this to pypi but that’s for a later date)</p>
 <p>Now there’s likely to be a large number of warnings about various things these are completely fine as long as you don’t
 see a big red bar or error messages the tests went smoothly.</p>
-</section>
-</section>
-<section id="windows">
+</div>
+</div>
+<div class="section" id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<section id="installing">
+<div class="section" id="installing">
 <h3>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h3>
 <p>fish2eod is not formally supported on windows, due to docker no longer being supported on non-professional versions of
 windows we have elected not to ship docker images. If you want to install fish2eod on windows you can either install a
@@ -293,8 +292,8 @@ environment variables.</p>
 </ol>
 <p>For both of these options you’ll need to install an x-windows emulator such as
 <a class="reference external" href="https://sourceforge.net/projects/xming/">x-ming</a></p>
-</section>
-<section id="installing-ide-wsl">
+</div>
+<div class="section" id="installing-ide-wsl">
 <h3>Installing IDE WSL<a class="headerlink" href="#installing-ide-wsl" title="Permalink to this headline">¶</a></h3>
 <p>For this we’ll install spyder3.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install spyder3
@@ -320,8 +319,8 @@ pip install ipykernel cloudpickle
 <img alt="_images/spyder_config_2.png" src="_images/spyder_config_2.png" />
 <img alt="_images/spyder_config_3.png" src="_images/spyder_config_3.png" />
 <img alt="_images/spyder_config_4.png" src="_images/spyder_config_4.png" />
-</section>
-<section id="routing-interpreter">
+</div>
+<div class="section" id="routing-interpreter">
 <h3>Routing Interpreter<a class="headerlink" href="#routing-interpreter" title="Permalink to this headline">¶</a></h3>
 <p>The only editor I know of that supports this is <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm professional</a>  free for
 students.</p>
@@ -347,9 +346,9 @@ appropriate path</p>
 <p>And disable scientific mode (it may be unset to begin with then get set once a scientific library such as numpy as
 fish2eod get set). Now restart the terminal and you should be good to get started.</p>
 <img alt="_images/disable_sci.png" src="_images/disable_sci.png" />
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

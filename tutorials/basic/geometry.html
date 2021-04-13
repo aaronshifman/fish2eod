@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Geometry &mdash; fish2eod 0.2.2b documentation</title>
@@ -179,7 +178,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="geometry">
+  <div class="section" id="geometry">
 <h1>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -189,13 +188,13 @@ Please see the <a class="reference internal" href="models.html"><span class="doc
 <p>In fish2eod <em>geometry</em> is the physical content of a model - it’s the tank, the fish, electrodes; any physical region.
 These regions form boundaries and domains which are used to specify the physics on the model (for an intro on this see
 our <a class="reference internal" href="theory.html#fem-intro"><span class="std std-ref">finite element introduction</span></a>).</p>
-<section id="geometry-basics">
+<div class="section" id="geometry-basics">
 <h2>Geometry Basics<a class="headerlink" href="#geometry-basics" title="Permalink to this headline">¶</a></h2>
 <p>There are 3 primitive types of geometry in fish2eod: circles, rectangles and polygons which in principle can be used
 to create an arbitrarily complex environment.</p>
 <p>The natural unit for all created geometries is <em>cm</em> i.e. a radius=1 implies a 1cm radius. For full details on the
 geometry api please see the <a class="reference internal" href="../../api/fish2eod.geometry.html#module-fish2eod.geometry.primitives" title="fish2eod.geometry.primitives"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Primitives</span> <span class="pre">Module</span></code></a></p>
-<section id="circles">
+<div class="section" id="circles">
 <h3>Circles<a class="headerlink" href="#circles" title="Permalink to this headline">¶</a></h3>
 <p>Circles are defined from a center point and a radius. Here we will create a circle with a 1cm radius centered at the
 point (0,5).</p>
@@ -212,12 +211,12 @@ point (0,5).</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/circle.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/circle.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/circle.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/circle.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/circle.png" src="../../_images/circle.png" />
-</figure>
+</div>
 <p>For full circle documentation please see the <a class="reference internal" href="../../api/fish2eod.geometry.html#fish2eod.geometry.primitives.Circle" title="fish2eod.geometry.primitives.Circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Circle</span></code></a> class</p>
-</section>
-<section id="rectangles">
+</div>
+<div class="section" id="rectangles">
 <h3>Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h3>
 <p>Rectangles are defined relative to the bottom left corner with a given width (horizontal) and height (vertical) for
 convenience if the height is omitted then the height is assumed to equal the width (i.e. a square).</p>
@@ -265,20 +264,16 @@ this can also be done with the <a class="reference internal" href="../../api/fis
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/rectangle.py">Source code</a>)</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../../_images/rectangle_00.png" src="../../_images/rectangle_00.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/rectangle_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id2">
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/rectangle_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
 <img alt="../../_images/rectangle_01.png" src="../../_images/rectangle_01.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/rectangle_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="polygons">
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/rectangle_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/rectangle_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="polygons">
 <h3>Polygons<a class="headerlink" href="#polygons" title="Permalink to this headline">¶</a></h3>
 <p>When combining circles and rectangles is insufficient to replicate your geometry you can use a polygon to replicate
 complex geometry.</p>
@@ -326,20 +321,20 @@ created by a polygon</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/polygon.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/polygon.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/polygon.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/polygon.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/polygon.png" src="../../_images/polygon.png" />
-</figure>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Polygons must <strong>not</strong> be closed i.e. the last point implicitly connects to the first point.</p>
 </div>
 <p>For full polygon documentation please see the <a class="reference internal" href="../../api/fish2eod.geometry.html#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polygon</span></code></a> class</p>
-</section>
-</section>
-<section id="integrating-geometries-into-models">
+</div>
+</div>
+<div class="section" id="integrating-geometries-into-models">
 <h2>Integrating Geometries into Models<a class="headerlink" href="#integrating-geometries-into-models" title="Permalink to this headline">¶</a></h2>
 <p>Making geometries starts with creating a subclass of the parent model (<a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.BaseFishModel" title="fish2eod.models.BaseFishModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseFishModel</span></code></a>).</p>
-<section id="basefishmodel">
+<div class="section" id="basefishmodel">
 <h3>BaseFishModel<a class="headerlink" href="#basefishmodel" title="Permalink to this headline">¶</a></h3>
 <p>Adding geometry is quite simple and there’s only one thing to know: Adding a domain or objects to a model is handled
 by the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.BaseFishModel.add_geometry" title="fish2eod.models.BaseFishModel.add_geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_geometry</span></code></a> method.</p>
@@ -378,18 +373,18 @@ by the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.mode
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/make_geometry_base_fish.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/make_geometry_base_fish.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/make_geometry_base_fish.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/make_geometry_base_fish.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/make_geometry_base_fish.png" src="../../_images/make_geometry_base_fish.png" />
-</figure>
+</div>
 <p>You may notice a few lines of code that you haven’t seen before. <code class="docutils literal notranslate"><span class="pre">model.compile()</span></code> compiles the model i.e. integrating
 everything you’ve specified in your description. and <code class="docutils literal notranslate"><span class="pre">model.draw_geometry()</span></code> does exactly what it sounds like - it draws
 the outline of each object with a unique color for each domain.</p>
 <p>Additionally the argument <code class="docutils literal notranslate"><span class="pre">sigma=1e6</span></code> means that this domain has a conductance of 1e6 S/cm - any positive number (valid
 conductance) can be used here.</p>
 <p>For a full documentation on these methods please see the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model.compile" title="fish2eod.models.Model.compile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compile</span></code></a> and the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model.plot_geometry" title="fish2eod.models.Model.plot_geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_geometry</span></code></a> methods.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

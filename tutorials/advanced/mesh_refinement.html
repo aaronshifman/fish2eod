@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Mesh Refinement &mdash; fish2eod 0.2.2b documentation</title>
@@ -172,7 +171,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mesh-refinement">
+  <div class="section" id="mesh-refinement">
 <h1>Mesh Refinement<a class="headerlink" href="#mesh-refinement" title="Permalink to this headline">¶</a></h1>
 <p>Sometimes the meshes generated will be too large (not enough spatial resolution) leading to low quality solutions.
 To solve this: fish2eod provides domain level mesh refinement highlighted here.</p>
@@ -210,15 +209,15 @@ To solve this: fish2eod provides domain level mesh refinement highlighted here.<
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/advanced/code/mesh_refinement.py">Source code</a>, <a class="reference external" href="../../tutorials/advanced/code/mesh_refinement.png">png</a>, <a class="reference external" href="../../tutorials/advanced/code/mesh_refinement.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/advanced/code/mesh_refinement.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/mesh_refinement.png" src="../../_images/mesh_refinement.png" />
-</figure>
+</div>
 <p>The parameters <code class="docutils literal notranslate"><span class="pre">refine_domains</span></code> and <code class="docutils literal notranslate"><span class="pre">n_refine</span></code> specify the which domains to refine and how many times the refinement
 should be done. Each refinement operation breaks the mesh elements into smaller pieces so a high <code class="docutils literal notranslate"><span class="pre">n_refine</span></code> provides
 a higher resolution mesh.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">refine_domains</span></code> and <code class="docutils literal notranslate"><span class="pre">n_refine</span></code> parameters can be directly specified to <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model.compile" title="fish2eod.models.Model.compile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model.compile</span></code></a> method or passed as
 additional parameters to the <a class="reference internal" href="../../api/fish2eod.html#fish2eod.sweep.IterativeSolver" title="fish2eod.sweep.IterativeSolver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a> during parameter sweeps.</p>
-</section>
+</div>
 
 
            </div>

@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Theory &mdash; fish2eod 0.2.2b documentation</title>
@@ -179,11 +178,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="theory">
+  <div class="section" id="theory">
 <h1>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
 <p>fish2eod is an integrated environment for computing the electric field surrounding electric fish via the
 <a class="reference external" href="https://en.wikipedia.org/wiki/Finite_element_method">Finite Element Method</a></p>
-<section id="fish2eod">
+<div class="section" id="fish2eod">
 <h2>fish2eod<a class="headerlink" href="#fish2eod" title="Permalink to this headline">¶</a></h2>
 <p>fish2eod is our answer to traditional electric fish models computed in <a class="reference external" href="https://comsol.com">COMSOL</a>. Similarly to
 <em>COMSOL</em> we can set parameters and solve stationary “flat” fish models. However where fish2eod differs from COMSOL is
@@ -191,8 +190,8 @@ its flexibility. Without any additional effort fish geometry can be arbitrarily 
 electrosensory system in freely moving fish. Importantly fish2eod is fully free and open source
 meaning that it can be run and deployed on as many processors as you wish without licensing constraints and additional
 “packages” requiring fees.</p>
-</section>
-<section id="finite-elements">
+</div>
+<div class="section" id="finite-elements">
 <h2>Finite Elements<a class="headerlink" href="#finite-elements" title="Permalink to this headline">¶</a></h2>
 <p>fish2eod makes use of the <em>Finite Element Method</em> (FEM) to compute the electric field from an electric fish.</p>
 <p>There are two important concepts defining parts of the model. A domain is a 2D region of the model. This could be any 2D
@@ -211,22 +210,18 @@ domains along with the computed mesh.</p>
 <a class="reference internal" href="basic_tutorials.html"><span class="doc">Basic Tutorials</span></a></p>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/make_domain_mesh.py">Source code</a>)</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../../_images/make_domain_mesh_00.png" src="../../_images/make_domain_mesh_00.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id2">
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
 <img alt="../../_images/make_domain_mesh_01.png" src="../../_images/make_domain_mesh_01.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/make_domain_mesh_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 <p>The equations are then solved for each point (node) on the mesh and the solution is interpolated at each point in space
 over the entire mesh.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

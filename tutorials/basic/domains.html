@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Domains &mdash; fish2eod 0.2.2b documentation</title>
@@ -180,10 +179,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="domains">
+  <div class="section" id="domains">
 <h1>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial assumes that you’ve already read the <a class="reference internal" href="geometry.html"><span class="doc">geometry tutorial</span></a>.</p>
-<section id="simple-domain-assignment">
+<div class="section" id="simple-domain-assignment">
 <h2>Simple Domain Assignment<a class="headerlink" href="#simple-domain-assignment" title="Permalink to this headline">¶</a></h2>
 <p>As before we will create a model BaseFishModel and highlight the domains</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example model where we show domains.&quot;&quot;&quot;</span>
@@ -214,24 +213,18 @@
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/fish_domains.py">Source code</a>)</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../../_images/fish_domains_00.png" src="../../_images/fish_domains_00.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id2">
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_00.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_00.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_00.pdf">pdf</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
 <img alt="../../_images/fish_domains_01.png" src="../../_images/fish_domains_01.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id3">
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_01.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_01.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_01.pdf">pdf</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id3">
 <img alt="../../_images/fish_domains_02.png" src="../../_images/fish_domains_02.png" />
-<figcaption>
-<p><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_02.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_02.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_02.pdf">pdf</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">(<a class="reference external" href="../../tutorials/basic/code/fish_domains_02.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_02.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/fish_domains_02.pdf">pdf</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 <p>Here we can see 5 domains</p>
 <ol class="arabic simple">
 <li><p>Background water/tank (purple)</p></li>
@@ -241,8 +234,8 @@
 <li><p>Electric organ in figure 3 (yellow)</p></li>
 </ol>
 <p>The <a class="reference internal" href="../../api/fish2eod.html#fish2eod.models.Model.plot_domains" title="fish2eod.models.Model.plot_domains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model.plot_subdomains</span></code></a> code is what generates the figures.</p>
-</section>
-<section id="overlapping-domains">
+</div>
+<div class="section" id="overlapping-domains">
 <h2>Overlapping Domains<a class="headerlink" href="#overlapping-domains" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -278,13 +271,13 @@ about the order geometries are added. As the domains will be assigned in that or
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/overlap_domain.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/overlap_domain.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/overlap_domain.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/overlap_domain.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/overlap_domain.png" src="../../_images/overlap_domain.png" />
-</figure>
+</div>
 <p>Since the square was added after the circle the square overlaps the circle. However had this been the other way around
 the circle will have covered the square.</p>
-</section>
-<section id="boundary-conditions">
+</div>
+<div class="section" id="boundary-conditions">
 <span id="bc-intro"></span><h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>Boundaries are the edges of a domain, for example a square would have 4 boundaries (edges). On boundaries the voltage or
 current can be perscribed to create what’s known as a source.</p>
@@ -305,7 +298,7 @@ error - in either case please contact us or raise an issue on Github for support
 <p>Here we will solve the model to highlight the changes. Details of this code will be explained in
 <a class="reference internal" href="solving.html"><span class="doc">later sections</span></a>. Additionally the plotting tutorials can be found <a class="reference internal" href="../plotting/plotting_basics.html"><span class="doc">here</span></a></p>
 </div>
-<section id="boundary-condition-objects">
+<div class="section" id="boundary-condition-objects">
 <h3>Boundary Condition Objects<a class="headerlink" href="#boundary-condition-objects" title="Permalink to this headline">¶</a></h3>
 <p>To keep things simple defining boundary conditions takes a <a class="reference internal" href="../../api/fish2eod.helpers.html#fish2eod.helpers.type_helpers.BoundaryCondition" title="fish2eod.helpers.type_helpers.BoundaryCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundaryCondition</span></code></a> object. Where we specify a label and a
 value. The label specifies which boundary is having the condition applied and the value is the value of the source. For
@@ -320,8 +313,8 @@ appropriately.</p>
 <p>Generally speaking boundaries will have the same label as the domain owning it. If the boundary is between any domain
 and the background. For example an electrode circle may be domain 8, in which case if its only touching the water it is
 also boundary 8.</p>
-</section>
-<section id="dirichelet-condition-constant-voltage">
+</div>
+<div class="section" id="dirichelet-condition-constant-voltage">
 <h3>Dirichelet Condition (Constant Voltage)<a class="headerlink" href="#dirichelet-condition-constant-voltage" title="Permalink to this headline">¶</a></h3>
 <p>Dirichelet boundary conditions apply a constant voltage to an edge. For example the ground is a dirichelet boundary as
 it has a defined voltage of 0. For example a small point source would represent an electrode with a fixed voltage
@@ -362,11 +355,11 @@ boundary conditions.</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/base_fish_model_dirichelet.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_dirichelet.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_dirichelet.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_dirichelet.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/base_fish_model_dirichelet.png" src="../../_images/base_fish_model_dirichelet.png" />
-</figure>
-</section>
-<section id="neumann-condition-constant-current">
+</div>
+</div>
+<div class="section" id="neumann-condition-constant-current">
 <h3>Neumann Condition (Constant Current)<a class="headerlink" href="#neumann-condition-constant-current" title="Permalink to this headline">¶</a></h3>
 <p>Neumann boundary conditions apply a constant current to an edge. For example the organ is a Neumann boundary with a
 complicated condition. Other examples would include an isolated current stimulator often used in experimental setups.</p>
@@ -406,12 +399,12 @@ boundary conditions.</p>
 </pre></div>
 </div>
 <p>(<a class="reference external" href="../../tutorials/basic/code/base_fish_model_neumann.py">Source code</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_neumann.png">png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_neumann.hires.png">hires.png</a>, <a class="reference external" href="../../tutorials/basic/code/base_fish_model_neumann.pdf">pdf</a>)</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/base_fish_model_neumann.png" src="../../_images/base_fish_model_neumann.png" />
-</figure>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>
