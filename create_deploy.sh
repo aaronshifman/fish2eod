@@ -2,9 +2,6 @@
 
 # only run for one instance py3.6 on linux when it's not a PR
 if [[ "$TRAVIS_PYTHON_VERSION" == "3.6" && "$TRAVIS_OS_NAME" = "linux" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
-  echo "Uploading to Codecov"
-  bash <(curl -s https://codecov.io/bash)
-
   echo "Building Docs"
   make -C docs buildapi
   make -C docs html
