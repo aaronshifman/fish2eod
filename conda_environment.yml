@@ -3,11 +3,10 @@
 
 name: fish2eod
 channels:
-  - conda-forge
   - defaults
 dependencies:
   - pip
-  - fenics-dolfin==2019.1.0
+  - conda-forge::fenics-dolfin==2019.1.0
   - pytest
   - pytest-runner
   - pytest-cov
@@ -23,7 +22,6 @@ dependencies:
   - numpy
   - scipy
   - hypothesis
-  - meshio
   - pip:
     - pygmsh==6.1.1 # pin to pre v7 TODO update to be compatible and update GMSH
     - opencv-python
@@ -31,3 +29,4 @@ dependencies:
     - sphinx_autodoc_typehints
     - h5py --no-binary=h5py # conda or pip?
     - matplotlib>3.2 # bugfix for conda solving on py3.6
+    - meshio
