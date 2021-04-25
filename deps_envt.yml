@@ -3,7 +3,6 @@ dependencies:
   - pytest
   - pytest-runner
   - pytest-cov
-  - pandas
   - tqdm
   - PyYAML
   - Sphinx>=2.0
@@ -12,8 +11,6 @@ dependencies:
   - sphinx_rtd_theme
   - ipython
   - dataclasses
-  - numpy
-  - scipy
   - hypothesis
   - pip:
     - pygmsh==6.1.1 # pin to pre v7 TODO update to be compatible and update GMSH
@@ -23,3 +20,6 @@ dependencies:
     - h5py --no-binary=h5py # conda or pip?
     - matplotlib>3.2 # bugfix for conda solving on py3.6
     - meshio
+    - numpy
+    - scipy
+    - pandas
