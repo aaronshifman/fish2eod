@@ -13,5 +13,6 @@ dependencies:
   - PyYAML
   - Shapely
   - lxml
-  - Sphinx>=2.0
-  - sphinx_rtd_theme
+  - ipython
+  - dataclasses
+  - hypothesis
