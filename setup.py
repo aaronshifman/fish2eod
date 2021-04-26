@@ -29,13 +29,6 @@ with open("conda_environment.yml") as f:
     deps = envt['dependencies']
     clean_deps = list(chain(*map(clean_dep, deps)))
 
-with open("deps_envt.yml") as f:
-    # The FullLoader parameter handles the conversion from YAML
-    # scalar values to Python the dictionary format
-    envt = yaml.load(f, Loader=yaml.FullLoader)
-    deps = envt['dependencies']
-    clean_deps += list(chain(*map(clean_dep, deps)))
-
 setuptools.setup(
     name="fish2eod",
     version=__version__,

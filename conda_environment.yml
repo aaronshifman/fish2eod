@@ -6,13 +6,28 @@ channels:
   - defaults
 dependencies:
   - conda-forge::fenics-dolfin==2019.1.0
-  - pytest
-  - pytest-runner
-  - pytest-cov
-  - tqdm
-  - PyYAML
-  - Shapely
-  - lxml
-  - ipython
-  - dataclasses
-  - hypothesis
+  - pip
+  - pip:
+    - pygmsh==6.1.1 # pin to pre v7 TODO update to be compatible and update GMSH
+    - opencv-python
+    - tables
+    - sphinx_autodoc_typehints
+    - h5py --no-binary=h5py # conda or pip?
+    - matplotlib>3.2 # bugfix for conda solving on py3.6
+    - meshio
+    - numpy
+    - scipy
+    - pandas
+    - Sphinx>=2.0
+    - sphinx_rtd_theme
+    - pytest
+    - pytest-runner
+    - pytest-cov
+    - tqdm
+    - PyYAML
+    - Shapely
+    - lxml
+    - ipython
+    - dataclasses
+    - hypothesis
+
