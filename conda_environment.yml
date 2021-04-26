@@ -6,3 +6,8 @@ channels:
   - defaults
 dependencies:
   - conda-forge::fenics-dolfin==2019.1.0
+  - pytest
+  - pytest-runner
+  - pytest-cov
+  - tqdm
+  - PyYAML

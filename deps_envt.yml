@@ -11,8 +11,6 @@ dependencies:
     - numpy
     - scipy
     - pandas
-    - tqdm
-    - PyYAML
     - Sphinx>=2.0
     - Shapely
     - lxml
@@ -20,6 +18,4 @@ dependencies:
     - ipython
     - dataclasses
     - hypothesis
-    - pytest
-    - pytest-runner
-    - pytest-cov
+
