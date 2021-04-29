@@ -26,8 +26,13 @@ install:
 - conda activate fish2eod
 script:
 - pytest
-after_success:
-- bash create_deploy.sh
-env:
-  global:
-  - secure: TP7fqWZ2nCxo+PXT8KKhiL1U464h97qVnxEAtlVTljeKkfNyJcgzYB9uu6gRNV1Fu5rTfunZ1rSZlsWhIx9NYr8ejy/o5mEju0yAa+PYs4KQbgCHD4IYOZePLoTHyE1CoC4OLJ0422TzHfv82V0hH10ACMirVxGmLe0Aw1N8L0eDbY+jc/fpksx7N/uxiD7pnGbeTkMdyzOZKPEZ5ZYif+8sNM7bJrtX5LtlZDNluyk6fMFm9olHVURnic/BnPUIYlUtJTdWVncaxKz9BOYYi5EPJJk0h55o914Kk8633TgTbIodXF3Zetv8pCnWh2e55zCWTTujt7pkdx6JLtO8Bpy3H9gYRFR45E10ZsuKtmh1UANCOJdbKx/PTFmxaDi8mtFn+NddzN5HeDlVUcano5J9E4pwrnHwhX8C9EBnTtN5M2ObWSChAOR0NrMIMn7Bm/N0MgojBW4CSLWW3+uHEALWBLFR0Prrr07IzYhhAlOmoUahgMbvlX21Y3cMagQCgSBao1/J3IV2I3YBxvHs07SQ9JIgIagC92iof9cikk81QlxUmI5rJ3YFB6Ke40YRzKPNypyPOjJt6YBrcSKGxm9n1afW4qq/Ir+qg+sNU7nRA7iwC7IYyoPhw324A7lLEJUfQB2fm8wC62uc0r217I5HlqxPzV0+urH9JMb9oXo=
+deploy:
+  provider: pages
+  skip_cleanup: true
+  script: create_deploy.sh
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: docs/build
+  on:
+    branch: master
+    condition: $TRAVIS_PYTHON_VERSION=3.6
