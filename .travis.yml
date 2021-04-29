@@ -26,10 +26,11 @@ install:
 - conda activate fish2eod
 script:
 - pytest
+after_success:
+- bash create_deploy.sh
 deploy:
   provider: pages
   skip_cleanup: true
-  script: create_deploy.sh
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   local_dir: docs/build
