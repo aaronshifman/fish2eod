@@ -37,4 +37,4 @@ deploy:
   local_dir: docs/build/html
   on:
     branch: master
-    condition: ($TRAVIS_PYTHON_VERSION = 3.6) AND ($TRAVIS_OS_NAME = linux) 
+    condition: $TRAVIS_PYTHON_VERSION = 3.6 && $TRAVIS_OS_NAME = linux
