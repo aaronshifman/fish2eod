@@ -1,39 +1,40 @@
 language: python
 jobs:
   include:
-  - os: linux
-    dist: bionic
-    python: 3.6
-  - os: linux
-    dist: bionic
-    python: 3.7
-  - os: linux
-    dist: bionic
-    python: 3.8
-  - os: osx
-    language: generic
-    env: TRAVIS_PYTHON_VERSION=3.6
-  - os: osx
-    language: generic
-    env: TRAVIS_PYTHON_VERSION=3.7
-  - os: osx
-    language: generic
-    env: TRAVIS_PYTHON_VERSION=3.8
+    - os: linux
+      dist: bionic
+      python: 3.6
+    - os: linux
+      dist: bionic
+      python: 3.7
+    - os: linux
+      dist: bionic
+      python: 3.8
+    - os: osx
+      language: generic
+      env: TRAVIS_PYTHON_VERSION=3.6
+    - os: osx
+      language: generic
+      env: TRAVIS_PYTHON_VERSION=3.7
+    - os: osx
+      language: generic
+      env: TRAVIS_PYTHON_VERSION=3.8
 install:
-- if [ "$TRAVIS_OS_NAME" = "osx" ]; then bash -i install_macos.sh; fi
-- if [ "$TRAVIS_OS_NAME" = "linux" ]; then bash -i install_linux.sh; fi
-- source "$HOME/miniconda/etc/profile.d/conda.sh"
-- conda activate fish2eod
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then bash -i install_macos.sh; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then bash -i install_linux.sh; fi
+  - source "$HOME/miniconda/etc/profile.d/conda.sh"
+  - conda activate fish2eod
 script:
-- pytest
+  - pytest
 after_success:
-- bash create_deploy.sh
+  - make -C docs buildapi
+  - make -C docs html
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: false
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  local_dir: docs/build
+  local_dir: docs/build/html
   on:
     branch: master
-    condition: $TRAVIS_PYTHON_VERSION=3.6
+    condition: $TRAVIS_PYTHON_VERSION = 3.6
