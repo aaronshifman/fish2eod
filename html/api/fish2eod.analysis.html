@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -362,7 +363,7 @@
 <li><p><strong>variable</strong> – Name of the variable</p></li>
 <li><p><strong>gradient_norm</strong> – Should the norm be computed</p></li>
 <li><p><strong>plot</strong> – Should the data be plotted</p></li>
-<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>]) – How to symmetrize the colormap (False/None, ‘full’, ‘equal’)</p></li>
+<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – How to symmetrize the colormap (False/None, ‘full’, ‘equal’)</p></li>
 <li><p><strong>mask</strong> – Valid matplotlib mask see generate_mask</p></li>
 <li><p><strong>kwargs</strong> – </p></li>
 </ul>
@@ -387,7 +388,7 @@
 <li><p><strong>solution</strong> – fish2eod solution to plot</p></li>
 <li><p><strong>variable</strong> – Name of the variable to plot</p></li>
 <li><p><strong>cmap</strong> – Name of the colormap</p></li>
-<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>]) – Which type of symmetry see <code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_norm</span></code></p></li>
+<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – Which type of symmetry see <code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_norm</span></code></p></li>
 <li><p><strong>color</strong> – Color to use (if not data i.e. outline)</p></li>
 </ul>
 </dd>
@@ -406,7 +407,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>solution</strong> – The solution structure</p></li>
 <li><p><strong>variable</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Name of the variable</p></li>
-<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>]) – How to symmetrize the colormap (False/None, ‘full’, ‘equal’)</p></li>
+<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – How to symmetrize the colormap (False/None, ‘full’, ‘equal’)</p></li>
 <li><p><strong>colorbar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Should the colorbar be plotted</p></li>
 <li><p><strong>mask</strong> – Valid matplotlib mask see generate_mask</p></li>
 <li><p><strong>kwargs</strong> – Data subset parameters and matplotlib settings</p></li>
@@ -431,7 +432,7 @@ array-like [min, max] sets the colorbar to a preset range</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>triangles</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Triangulation</span></code>]) – Triangulated mesh</p></li>
 <li><p><strong>data</strong> – Data to normalized</p></li>
-<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>]) – What type of colormap</p></li>
+<li><p><strong>color_style</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – What type of colormap</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
