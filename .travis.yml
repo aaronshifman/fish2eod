@@ -29,6 +29,7 @@ script:
 after_success:
   - make -C docs buildapi
   - make -C docs html
+  - touch docs/build/html/.nojekyll
 deploy:
   provider: pages
   skip_cleanup: true
