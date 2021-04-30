@@ -1,0 +1,1164 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fish2eod.geometry package &mdash; fish2eod 0.2.2b documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fish2eod.helpers package" href="fish2eod.helpers.html" />
+    <link rel="prev" title="fish2eod.analysis package" href="fish2eod.analysis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> fish2eod
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fish2eod.html">fish2eod package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fish2eod.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="fish2eod.analysis.html">fish2eod.analysis package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">fish2eod.geometry package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-fish2eod.geometry.fish">fish2eod.geometry.fish module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-fish2eod.geometry.operations">fish2eod.geometry.operations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-fish2eod.geometry.primitives">fish2eod.geometry.primitives module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fish2eod.helpers.html">fish2eod.helpers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fish2eod.mesh.html">fish2eod.mesh package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fish2eod.xdmf.html">fish2eod.xdmf package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fish2eod.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fish2eod.html#module-fish2eod.models">fish2eod.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fish2eod.html#module-fish2eod.properties">fish2eod.properties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fish2eod.html#module-fish2eod.sweep">fish2eod.sweep module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fish2eod</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="fish2eod.html">fish2eod package</a> &raquo;</li>
+        
+      <li>fish2eod.geometry package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/fish2eod.geometry.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fish2eod.geometry">
+<span id="fish2eod-geometry-package"></span><h1>fish2eod.geometry package<a class="headerlink" href="#module-fish2eod.geometry" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-fish2eod.geometry.fish">
+<span id="fish2eod-geometry-fish-module"></span><h2>fish2eod.geometry.fish module<a class="headerlink" href="#module-fish2eod.geometry.fish" title="Permalink to this headline">¶</a></h2>
+<p>Functions and classes for defining special fish geometries.</p>
+<p>Fish is the generic fish class
+Apteronotus is a fish of species Apteronotus with appropriate body and parameters
+Eigenmannia is a fish of species Eigenmannia with appropriate body and parameters</p>
+<dl class="py class">
+<dt id="fish2eod.geometry.fish.Apteronotus">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">Apteronotus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skeleton_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skeleton_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Apteronotus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fish2eod.geometry.fish.Fish" title="fish2eod.geometry.fish.Fish"><code class="xref py py-class docutils literal notranslate"><span class="pre">fish2eod.geometry.fish.Fish</span></code></a></p>
+<p>Apteronotus implementation of Fish.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skeleton_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x coordinates of the skeleton</p></li>
+<li><p><strong>skeleton_y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – y coordinates of the skeleton</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.fish.Eigenmannia">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">Eigenmannia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skeleton_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skeleton_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Eigenmannia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fish2eod.geometry.fish.Fish" title="fish2eod.geometry.fish.Fish"><code class="xref py py-class docutils literal notranslate"><span class="pre">fish2eod.geometry.fish.Fish</span></code></a></p>
+<p>Eigenmannia implementation of Fish.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skeleton_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x coordinates of the skeleton</p></li>
+<li><p><strong>skeleton_y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – y coordinates of the skeleton</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.fish.Fish">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">Fish</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skeleton_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skeleton_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Body of a fish defined by a skeleton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skeleton_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x coordinates of the skeleton</p></li>
+<li><p><strong>skeleton_y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – y coordinates of the skeleton</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.create_body">
+<code class="sig-name descname"><span class="pre">create_body</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.create_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the body which is the skeleton offset by the body profile.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.create_fish_components">
+<code class="sig-name descname"><span class="pre">create_fish_components</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.create_fish_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the geometry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.create_organ">
+<code class="sig-name descname"><span class="pre">create_organ</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.create_organ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the organ which is the skeleton offset by the organ width between 2 bounds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.data_base">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_base</span></code><a class="headerlink" href="#fish2eod.geometry.fish.Fish.data_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the data.</p>
+<p>If a custom base is set return that otherwise return from stock datasets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path to fish data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.draw">
+<code class="sig-name descname"><span class="pre">draw</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">draw_sides</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the fish.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>draw_sides</strong> – Color the sides differently (left red, right green) for debug purposes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.eod_boundary_condition">
+<code class="sig-name descname"><span class="pre">eod_boundary_condition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.eod_boundary_condition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.get_interpolated_body_coordinates">
+<code class="sig-name descname"><span class="pre">get_interpolated_body_coordinates</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.get_interpolated_body_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the body coordinates uniformly interpolated interpolated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of points to interpolate</p></li>
+<li><p><strong>m</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Resolution for computing curve length</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Body x and y coordinates uniformly interpolated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.get_raw_body_coordinates">
+<code class="sig-name descname"><span class="pre">get_raw_body_coordinates</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.get_raw_body_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the data and scale it so that it matches the fish spine length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Scaled body x and y coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.middle_conductance">
+<code class="sig-name descname"><span class="pre">middle_conductance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head_fraction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tail_fraction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.middle_conductance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the middle_cond which is a linear slope between head and tail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.offset_skeleton">
+<code class="sig-name descname"><span class="pre">offset_skeleton</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.offset_skeleton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a body part by offsetting the skeleton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – Distance from curve to offset</p></li>
+<li><p><strong>bounds</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – Optional bounds to offset from. This is used for the organ which is not the whole skeleton</p></li>
+<li><p><strong>threshold</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Width to simplify</p></li>
+<li><p><strong>lcar</strong> – Characteristic length</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The offset polygon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.setup_sides">
+<code class="sig-name descname"><span class="pre">setup_sides</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.setup_sides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag and create a contour for the left and right sides of each body part.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.Fish.skin_conductance">
+<code class="sig-name descname"><span class="pre">skin_conductance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.Fish.skin_conductance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the skin conductance at a point (x,y) on the skin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – x coordinate on skin</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – y coordinate on skin</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the skin conductance</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.fish.FishContainer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">FishContainer</span></code><a class="headerlink" href="#fish2eod.geometry.fish.FishContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.FishContainer.init_fish">
+<code class="sig-name descname"><span class="pre">init_fish</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fish_x_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fish_y_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">species</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.FishContainer.init_fish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize all fish.</p>
+<p>Multiple fish are specified with multidimensional lists.</p>
+<p>The x list [0,20] would specify a single fish spanning [0,20]cm.
+The x list [[0,20]] would specify a single fish spanning [0,20]cm.
+The x list [[0,20], [40, 60]] would specify two fish one spanning [0,20]cm and the other [40,60]cm</p>
+<p>Any number of fish can be specified in this manner as long as there are an equal number of fish specified in
+the x and y coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fish_x_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – List of fish x-coordinates</p></li>
+<li><p><strong>fish_y_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – List of fish y-coordinates</p></li>
+<li><p><strong>species</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Name of the species</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.fish.SideStruct">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">SideStruct</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<p>Convenience struct to hold a left and right side array.</p>
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.SideStruct.left">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">left</span></code><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.fish.SideStruct.right">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">right</span></code><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.align_contour_head_tail">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">align_contour_head_tail</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.align_contour_head_tail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reorder a side if necessary so that it runs from head -&gt; tail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>side</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Coordinates of the side</p></li>
+<li><p><strong>head</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Coordinate of the head</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Coordinates of the side in correct order</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.assign_left_right">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">assign_left_right</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skeleton</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.assign_left_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map the 2 sides onto a “left” and “right” relative to the fish axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parts</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>]) – Tuple of sides to assign</p></li>
+<li><p><strong>skeleton</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>) – The body skeleton</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Tuple of coordinates for right and left (in that order)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.clean_linestring">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">clean_linestring</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body_half</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contour</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.clean_linestring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the cut body contour.</p>
+<p>When the polygon gets cut - the outline of the cutter is embedded into it. This extracts the pure skin contour</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body_half</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code>) – The half body to get the skin from</p></li>
+<li><p><strong>contour</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>) – Contour of the whole fish</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Appropriate sided contour</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.determine_right">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">determine_right</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skeleton</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.determine_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the given side is the right side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>side</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – One of the sides</p></li>
+<li><p><strong>head</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Head coordinates</p></li>
+<li><p><strong>tail</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Tail coordinates</p></li>
+<li><p><strong>skeleton</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Skeleton Coordinates</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the side is the right side of not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.extract_eod_phase">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">extract_eod_phase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.extract_eod_phase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the eod at the target phase from all the EOD data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_phase</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – EOD phase to extract</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>) – All loaded eod data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>EOD</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.fish_rotation_matrix">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">fish_rotation_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tail</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.fish_rotation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the 2D rotation matrix for the fish with rotation relative to y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Coordinates of the head</p></li>
+<li><p><strong>tail</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – Coordinates of the tail</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Rotation matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.get_body">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">get_body</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.get_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the body coordinates into a dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>) – Optional path to a new body specification</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>eod(t) where 0 &lt;= t &lt;= 1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.get_eod">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">get_eod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.get_eod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the eod into an interpolation function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>phase</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Eod phase</p></li>
+<li><p><strong>data_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>) – Optional path to a new body specification</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>eod(t) where 0 &lt;= t &lt;= 1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.get_species_object">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">get_species_object</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">species_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.get_species_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the object representing the species class from the species name.</p>
+<p>Species name can be either Apteronotus or Eigenmannia or for simplicity the first letter (A/E)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>species_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Name of the species</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>[<a class="reference internal" href="#fish2eod.geometry.fish.Fish" title="fish2eod.geometry.fish.Fish"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fish</span></code></a>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Class to instantiate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.fish.split_body">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">split_body</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skeleton</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polygon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.split_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a polygon with a skeleton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skeleton</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>) – Body skeleton</p></li>
+<li><p><strong>polygon</strong> (<a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a>) – The body part to split</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The two halves of the body part</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-fish2eod.geometry.operations">
+<span id="fish2eod-geometry-operations-module"></span><h2>fish2eod.geometry.operations module<a class="headerlink" href="#module-fish2eod.geometry.operations" title="Permalink to this headline">¶</a></h2>
+<p>Geometry operations for slicing, offsetting, and interpolating lines.</p>
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.cut_line_between_fractions">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">cut_line_between_fractions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_fraction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_fraction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.cut_line_between_fractions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut a line at 2 fractions and return the region between them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> (<em>&lt;module 'shapely.geometry.linestring' from '/home/travis/miniconda/envs/fish2eod/lib/python3.6/site-packages/shapely/geometry/linestring.py'&gt;</em>) – Linestring to cut</p></li>
+<li><p><strong>start_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 1 (0 &lt; f1 &lt; f2)</p></li>
+<li><p><strong>end_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 2 (f1 &lt; f2 &lt; 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Linestring that was cut out</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.extend_line">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">extend_line</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.extend_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend (linearly extrapolate) an arbitrary curve at both ends.</p>
+<p>x and y are now of the form</p>
+<p>front_extrapolate, x_original, end_extrapolate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x coordinates of the curve</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – y coordinates of the curve</p></li>
+<li><p><strong>fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction of the line distance to extrapolate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Extended line</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.filter_line_length">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">filter_line_length</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_fraction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_fraction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_slice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.filter_line_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a line slice is “very close” to the target line fractions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>original_line</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>) – Original line being cut</p></li>
+<li><p><strong>start_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 1 (0 &lt; f1 &lt; f2)</p></li>
+<li><p><strong>end_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 2 (f1 &lt; f2 &lt; 1)</p></li>
+<li><p><strong>line_slice</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">LineString</span></code>) – New line to check</p></li>
+<li><p><strong>tol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Optional parameter to define how close is “close”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the line_slice is the desired sliced line</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.measure_and_interpolate">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">measure_and_interpolate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.measure_and_interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolate coordinates and compute length of each section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – X coordinates</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Y coordinates</p></li>
+<li><p><strong>m</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Minimum number of points to interpolate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>length of each segment and interpolated x, y</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.parallel_curves">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">parallel_curves</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.parallel_curves" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO def this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fish2eod.geometry.operations.uniform_spline_interpolation">
+<code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.operations.</span></code><code class="sig-name descname"><span class="pre">uniform_spline_interpolation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.operations.uniform_spline_interpolation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolate coordinates with n evenly spaced points along a spline.</p>
+<p>Interpolation will ensure the first and last point on the line are included in the spline</p>
+<p>If there are turns in the spline (like a sine-wave) the number of points (n) needs to be high enough that spatial
+frequency of sampled points &gt;&gt; spatial frequency of spline or you will get cuts at the curves - interpolation is a
+low pass filter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x coordinates</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – y coordinates</p></li>
+<li><p><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of points to interpolate</p></li>
+<li><p><strong>m</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Resolution for computing curve length (default of 10000 should be sufficient)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Interpolated x, y points for sources</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-fish2eod.geometry.primitives">
+<span id="fish2eod-geometry-primitives-module"></span><h2>fish2eod.geometry.primitives module<a class="headerlink" href="#module-fish2eod.geometry.primitives" title="Permalink to this headline">¶</a></h2>
+<p>Geometry primitives for constructing a model.</p>
+<p>Polygon is the base class which can be used to define abstract shapes
+Circle defines circles
+Rectangle defines rectangles</p>
+<dl class="py class">
+<dt id="fish2eod.geometry.primitives.Circle">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.primitives.</span></code><code class="sig-name descname"><span class="pre">Circle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">fish2eod.geometry.primitives.Polygon</span></code></a></p>
+<p>Circle geometry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>center</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Sequency of 2 floats specifying circle center</p></li>
+<li><p><strong>radius</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Circle radius</p></li>
+<li><p><strong>lcar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional overwrite for characteristic length</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Circle.inside">
+<code class="sig-name descname"><span class="pre">inside</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Circle.inside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the string expression for a particular circle for dolfin to check if a point is inside.</p>
+<p>x[0] and x[1] are the dolfin expressions for coordinates x, y</p>
+<p>checks if (x-x[0])^2 + (y-x[1])^2 &lt;= (r+buffer)^2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Ignored</p></li>
+<li><p><strong>_</strong> – Ignored</p></li>
+<li><p><strong>buffer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Radius buffer to include edge points - should be small, enough to catch rounding errors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of code to compile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="fish2eod.geometry.primitives.Circle.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'Circle'</span></em><a class="headerlink" href="#fish2eod.geometry.primitives.Circle.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.primitives.Polygon">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.primitives.</span></code><code class="sig-name descname"><span class="pre">Polygon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dolfin.cpp.mesh.SubDomain</span></code></p>
+<p>Polygon object: all geometry objects are represented as polygons.</p>
+<p>Provides a convenient interface between shapely and dolfin SubDomains</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Sequence of floats specifying x coordinates</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Sequence of floats specifying y coordinates</p></li>
+<li><p><strong>lcar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional overwrite for characteristic length</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.center">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">center</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get coordinates of the centroid of the object.</p>
+<p>Should be close but not exact for circles and rectangles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tuple of center</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.draw">
+<code class="sig-name descname"><span class="pre">draw</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the geometry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>color</strong> – Valid matplotlib color</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.expand">
+<code class="sig-name descname"><span class="pre">expand</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blow up a geometry to widen it.</p>
+<p>Buffer or expand slightly a geometry object.</p>
+<p>Note: This is exact for circles but angles will round the more the shape is offset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – The distance to offset: try to keep this small</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The offset object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.inside">
+<code class="sig-name descname"><span class="pre">inside</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.inside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the point x inside the shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Point to check</p></li>
+<li><p><strong>_</strong> – Ignored</p></li>
+<li><p><strong>buffer</strong> – Edge buffer to include edge points - should be small, enough to catch rounding errors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.intersects">
+<code class="sig-name descname"><span class="pre">intersects</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.intersects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if geometry intersect another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a>) – Another geometry object to check</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether or not the two geometries intersect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.mesh_representation">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mesh_representation</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.mesh_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the coordinates for the mesh.</p>
+<p>pygmsh requires surfaces to be open and implicitly closes them so x and y return [:-1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Iterable of (x,y,z) pairs: z=0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="fish2eod.geometry.primitives.Polygon.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'Polygon'</span></em><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.rotate">
+<code class="sig-name descname"><span class="pre">rotate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degrees</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate an object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Angle to rotate object in</p></li>
+<li><p><strong>degrees</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Is number in degrees or radians. Defaults to degrees</p></li>
+<li><p><strong>center</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – Optional center to rotate about: sequence of 2 floats</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.shapely_representation">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">shapely_representation</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.shapely_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get representation of the shape as a geometry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.simplify">
+<code class="sig-name descname"><span class="pre">simplify</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.simplify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simplify a geometry.</p>
+<p>Complex geometries can have too many micro verteces which make meshing complex. Strip out edges shorter than
+simp</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold length to simplify</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Polygon.translate">
+<code class="sig-name descname"><span class="pre">translate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Polygon.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate an object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dx</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Shift in x</p></li>
+<li><p><strong>dy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Shift in y</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.primitives.PreDomain">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.primitives.</span></code><code class="sig-name descname"><span class="pre">PreDomain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primitive</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<p>Convenience structure for containing information to be converted to a domain.</p>
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.PreDomain.label">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">label</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.PreDomain.objects">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.PreDomain.primitive">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">primitive</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.primitive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fish2eod.geometry.primitives.Rectangle">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.primitives.</span></code><code class="sig-name descname"><span class="pre">Rectangle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">fish2eod.geometry.primitives.Polygon</span></code></a></p>
+<p>Rectangle geometry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corner</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Bottom left corner of the rectangle: sequence of 2 floats defining the bottom left</p></li>
+<li><p><strong>width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Width of the rectangle (x-axis)</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional height of the rectangle: if not specified the rectangle becomes a square</p></li>
+<li><p><strong>lcar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional overwrite for characteristic length</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Rectangle.from_center">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_center</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle.from_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct rectangle when the center of the rectangle is specified (alternate constructor).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>center</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Center coordinate: sequence of 2 floats defining the rectangle center</p></li>
+<li><p><strong>width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Width of the rectangle (x-axis)</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional height of the rectangle: if not specified the rectangle becomes a square</p></li>
+<li><p><strong>lcar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Optional overwrite for characteristic length</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#fish2eod.geometry.primitives.Rectangle" title="fish2eod.geometry.primitives.Rectangle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rectangle</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A rectangle defined from the center</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Rectangle.height">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">height</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the height of the rectangle.</p>
+<p>If the rectangle is defined as a square then _height is None and therefore return the width instead</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Rectangle.inside">
+<code class="sig-name descname"><span class="pre">inside</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle.inside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the string expression for a particular rectangle for dolfin to check if a point is inside.</p>
+<p>x[0] and x[1] are the dolfin expressions for coordinates x, y</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Ignored</p></li>
+<li><p><strong>_</strong> – Ignored</p></li>
+<li><p><strong>buffer</strong> – Edge buffer to include edge points - should be small, enough to catch rounding errors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of code to compile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="fish2eod.geometry.primitives.Rectangle.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'Rectangle'</span></em><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fish2eod.geometry.primitives.Rectangle.validate_height">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">validate_height</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.Rectangle.validate_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the height to a valid number.</p>
+<p>When the rectangle is defined as a square the height is None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>height</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Height to validate</p></li>
+<li><p><strong>width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Width of object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the height or the width if height is None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="fish2eod.helpers.html" class="btn btn-neutral float-right" title="fish2eod.helpers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fish2eod.analysis.html" class="btn btn-neutral float-left" title="fish2eod.analysis package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Aaron R. Shifman, John E. Lewis.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
