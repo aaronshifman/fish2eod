@@ -13,7 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -195,21 +194,21 @@
 <p>a is the bilinear form
 u is the trial function
 rhs is the right hand side of the equation</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.dolfin_tools.Equation.a">
-<code class="sig-name descname"><span class="pre">a</span></code><em class="property"><span class="pre">:</span> <span class="pre">dolfin.fem.form.Form</span></em><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.a" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">a</span></code><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.a" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.dolfin_tools.Equation.rhs">
-<code class="sig-name descname"><span class="pre">rhs</span></code><em class="property"><span class="pre">:</span> <span class="pre">dolfin.fem.form.Form</span></em><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.rhs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">rhs</span></code><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.rhs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.dolfin_tools.Equation.u">
-<code class="sig-name descname"><span class="pre">u</span></code><em class="property"><span class="pre">:</span> <span class="pre">dolfin.function.argument.TrialFunction</span></em><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.u" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">u</span></code><a class="headerlink" href="#fish2eod.helpers.dolfin_tools.Equation.u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
@@ -293,15 +292,15 @@ data will be saved as [[x0], [x1], [x2], … [xn]] so flatten the array.</p>
 <p>value is the value of the boundary condition; it can be a number, a string-like expression i.e. “1+x[0]” or a full
 dolfin expression</p>
 <p>label is the boundary label to apply the value to</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.BoundaryCondition.label">
-<code class="sig-name descname"><span class="pre">label</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.BoundaryCondition.label" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">label</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.BoundaryCondition.label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.BoundaryCondition.value">
-<code class="sig-name descname"><span class="pre">value</span></code><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dolfin.function.expression.Expression</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.BoundaryCondition.value" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">value</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.BoundaryCondition.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
@@ -311,27 +310,27 @@ dolfin expression</p>
 <dt id="fish2eod.helpers.type_helpers.ComputatableSideInformation">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.helpers.type_helpers.</span></code><code class="sig-name descname"><span class="pre">ComputatableSideInformation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arc_length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ComputatableSideInformation.arc_length">
-<code class="sig-name descname"><span class="pre">arc_length</span></code><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.arc_length" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">arc_length</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.arc_length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 3</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ComputatableSideInformation.coordinates">
-<code class="sig-name descname"><span class="pre">coordinates</span></code><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.coordinates" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">coordinates</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.coordinates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ComputatableSideInformation.side">
-<code class="sig-name descname"><span class="pre">side</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.side" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">side</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.side" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ComputatableSideInformation.skin_type">
-<code class="sig-name descname"><span class="pre">skin_type</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.skin_type" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">skin_type</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ComputatableSideInformation.skin_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
@@ -342,45 +341,45 @@ dolfin expression</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.helpers.type_helpers.</span></code><code class="sig-name descname"><span class="pre">DataSet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_state</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_map</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 <p>Helper for organizing a solution.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.data">
-<code class="sig-name descname"><span class="pre">data</span></code><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.domain_map">
-<code class="sig-name descname"><span class="pre">domain_map</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.domain_map" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">domain_map</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.domain_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 6</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.geometry">
-<code class="sig-name descname"><span class="pre">geometry</span></code><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.geometry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">geometry</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.name">
-<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 4</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.parameter_state">
-<code class="sig-name descname"><span class="pre">parameter_state</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.parameter_state" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">parameter_state</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.parameter_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 5</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.time_step">
-<code class="sig-name descname"><span class="pre">time_step</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.time_step" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_step</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.time_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 3</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.DataSet.topology">
-<code class="sig-name descname"><span class="pre">topology</span></code><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.topology" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">topology</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.DataSet.topology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
@@ -395,15 +394,15 @@ dolfin expression</p>
 <p>domains is the set of domains to modify
 value is either a single conductance value for all domains or a sequence of numbers (1 per domain) for different
 null conditions</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ElectricImageParameters.domains">
-<code class="sig-name descname"><span class="pre">domains</span></code><em class="property"><span class="pre">:</span> <span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ElectricImageParameters.domains" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">domains</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ElectricImageParameters.domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.helpers.type_helpers.ElectricImageParameters.value">
-<code class="sig-name descname"><span class="pre">value</span></code><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.helpers.type_helpers.ElectricImageParameters.value" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">value</span></code><a class="headerlink" href="#fish2eod.helpers.type_helpers.ElectricImageParameters.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 

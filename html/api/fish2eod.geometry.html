@@ -13,7 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -419,15 +418,15 @@ the x and y coordinates.</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.fish.</span></code><code class="sig-name descname"><span class="pre">SideStruct</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 <p>Convenience struct to hold a left and right side array.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.geometry.fish.SideStruct.left">
-<code class="sig-name descname"><span class="pre">left</span></code><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.left" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">left</span></code><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.left" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.geometry.fish.SideStruct.right">
-<code class="sig-name descname"><span class="pre">right</span></code><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.right" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">right</span></code><a class="headerlink" href="#fish2eod.geometry.fish.SideStruct.right" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
@@ -633,7 +632,7 @@ the x and y coordinates.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>line</strong> (<em>&lt;module 'shapely.geometry.linestring' from '/home/travis/miniconda/envs/fish2eod/lib/python3.8/site-packages/shapely/geometry/linestring.py'&gt;</em>) – Linestring to cut</p></li>
+<li><p><strong>line</strong> (<em>&lt;module 'shapely.geometry.linestring' from '/home/travis/miniconda/envs/fish2eod/lib/python3.6/site-packages/shapely/geometry/linestring.py'&gt;</em>) – Linestring to cut</p></li>
 <li><p><strong>start_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 1 (0 &lt; f1 &lt; f2)</p></li>
 <li><p><strong>end_fraction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Fraction 2 (f1 &lt; f2 &lt; 1)</p></li>
 </ul>
@@ -992,21 +991,21 @@ simp</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fish2eod.geometry.primitives.</span></code><code class="sig-name descname"><span class="pre">PreDomain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primitive</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 <p>Convenience structure for containing information to be converted to a domain.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.geometry.primitives.PreDomain.label">
-<code class="sig-name descname"><span class="pre">label</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.label" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">label</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.geometry.primitives.PreDomain.objects">
-<code class="sig-name descname"><span class="pre">objects</span></code><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fish2eod.geometry.primitives.Polygon" title="fish2eod.geometry.primitives.Polygon"><span class="pre">fish2eod.geometry.primitives.Polygon</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.objects" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="fish2eod.geometry.primitives.PreDomain.primitive">
-<code class="sig-name descname"><span class="pre">primitive</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.primitive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">primitive</span></code><a class="headerlink" href="#fish2eod.geometry.primitives.PreDomain.primitive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
