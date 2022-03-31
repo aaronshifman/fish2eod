@@ -13,7 +13,7 @@ dependencies:
     - tables
     - h5py --no-binary=h5py # conda or pip?
     - matplotlib>3.2 # bugfix for conda solving on py3.6
-    - meshio
+    - meshio<5
     - numpy
     - scipy
     - pandas
