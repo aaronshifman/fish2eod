@@ -4,24 +4,26 @@
 name: fish2eod
 channels:
   - defaults
+  - conda-forge
 dependencies:
-  - conda-forge::fenics-dolfin==2019.1.0
-  - conda-forge::superlu_dist==7.2.0
-  - conda-forge::gmsh==3.0.6
+  - python==3.8.12
+  - fenics-dolfin==2019.1.0
+  - superlu_dist==7.2.0
+  - gmsh==3.0.6
+  - tables
+  - h5py
+  - matplotlib
+  - meshio<5
+  - numpy
+  - scipy
+  - pandas
+  - tqdm
+  - PyYAML
+  - Shapely
+  - lxml
+  - dataclasses
   - pip
   - pip:
-    - tables
-    - h5py --no-binary=h5py # conda or pip?
-    - matplotlib>3.2 # bugfix for conda solving on py3.6
-    - meshio<5
-    - numpy
-    - scipy
-    - pandas
-    - tqdm
-    - PyYAML
-    - Shapely
-    - lxml
-    - dataclasses
     - Sphinx>=2.0
     - sphinx_rtd_theme
     - ipython
