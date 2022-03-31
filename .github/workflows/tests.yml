@@ -35,9 +35,9 @@ jobs:
       - name: Install Dependencies
         run: |
           conda install pytest pytest-cov
-          bash ${{ matrix.script_name }}
 
       - name: Install libglu1-mesa
+        if: matrix.os == 'ubuntu-18.04'
         run: sudo apt-get install -y libglu1-mesa
 
       - name: Run Tests
