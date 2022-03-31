@@ -7,9 +7,9 @@ channels:
 dependencies:
   - conda-forge::fenics-dolfin==2019.1.0
   - conda-forge::superlu_dist==7.2.0
+  - conda-forge::gmsh==3.0.6
   - pip
   - pip:
-    - pygmsh==6.1.1 # pin to pre v7 TODO update to be compatible and update GMSH
     - tables
     - h5py --no-binary=h5py # conda or pip?
     - matplotlib>3.2 # bugfix for conda solving on py3.6

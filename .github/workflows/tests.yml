@@ -17,11 +17,7 @@ jobs:
       matrix:
         os: [ ubuntu-18.04, macos-latest ]
         python-version: [ 3.7, 3.8, 3.9 ]
-        include:
-          - os: ubuntu-18.04
-            script_name: .github/workflows/install_linux.sh
-          - os: macos-latest
-            script_name: .github/workflows/install_macos.sh
+
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -40,6 +36,9 @@ jobs:
         run: |
           conda install pytest pytest-cov
           bash ${{ matrix.script_name }}
+
+      - name: Install libglu1-mesa
+        run: sudo apt-get install -y libglu1-mesa
 
       - name: Run Tests
         run: |
