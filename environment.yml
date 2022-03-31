@@ -6,11 +6,10 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python==3.8.12
   - fenics-dolfin==2019.1.0
   - superlu_dist==7.2.0
   - gmsh==3.0.6
-  - tables
+  - pytables
   - h5py
   - matplotlib
   - meshio<5
