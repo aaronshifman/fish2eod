@@ -151,7 +151,7 @@ def mesh_add(obj: Polygon, mesh_geometry: Mesher):
     :return: None
     """
     if isinstance(obj, Circle):
-        add_circle(obj, mesh_geometry)
+        return add_circle(obj, mesh_geometry)
 
     return add_poly(obj, mesh_geometry)
 
