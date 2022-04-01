@@ -136,9 +136,8 @@ def create_mesh(model_geometry: ModelGeometry, verbose: bool = True) -> df.Mesh:
     [mesh_add(obj, mesh_geometry) for (_, obj) in model_geometry]
 
     created_mesh = mesh_geometry.make_mesh()
-    created_mesh.remove_lower_dimensional_cells()
-    assert created_mesh.cells[-1].type == "triangle", "Something has changed in meshio: please submit a bug report"
-    return create_dolfin_mesh(created_mesh.points, created_mesh.cells[-1].data)
+    triangles = [c.data for c in created_mesh.cells if c.type=='triangle']
+    return create_dolfin_mesh(created_mesh.points, np.vstack(triangles))
 
 
 def mesh_add(obj: Polygon, mesh_geometry: Mesher):
