@@ -34,6 +34,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
           auto-activate-base: false
 
+      - name: Log Conda Environment
+        run: |
+          conda info
+          conda list
+
       - name: Install Dependencies
         run: |
           conda install pytest pytest-cov
