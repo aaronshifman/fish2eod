@@ -47,6 +47,7 @@ jobs:
       - name: Install Dependencies
         run: |
           conda install pytest pytest-cov
+          pip install pytest-forked
 
       - name: Install libglu1-mesa
         if: matrix.os == 'ubuntu-18.04'
@@ -61,8 +62,7 @@ jobs:
       - name: Run Tests
         # I have no idea why running this test first is needed, something about memory (PR #1)
         run: |
-          pytest -k test_io.py
-          pytest --cov=./ --cov-report=xml
+          pytest --cov=./ --cov-report=xml --forked
 
       - name: Store Coverage Report
         uses: actions/upload-artifact@v2
