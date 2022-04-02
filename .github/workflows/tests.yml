@@ -47,10 +47,10 @@ jobs:
         if: matrix.os == 'ubuntu-18.04'
         run: sudo apt-get install -y libglu1-mesa
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-      with:
-        limit-access-to-actor: true
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          limit-access-to-actor: true
 
       - name: Run Tests
         # I have no idea why running this test first is needed, something about memory (PR #1)
