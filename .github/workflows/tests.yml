@@ -14,7 +14,6 @@ on:
 jobs:
   pytest:
     strategy:
-      max-parallel: 1
       fail-fast: false
       matrix:
         os: [ ubuntu-18.04, macos-latest ]
@@ -49,6 +48,7 @@ jobs:
 
       - name: Run Tests
         run: |
+        # I have no idea why running this test first is needed, something about memory (PR #1)
           pytest -k test_io.py
           pytest --cov=./ --cov-report=xml
 
