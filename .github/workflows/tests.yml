@@ -49,6 +49,7 @@ jobs:
 
       - name: Run Tests
         run: |
+          pytest -k test_io.py
           pytest --cov=./ --cov-report=xml
 
       - name: Store Coverage Report
