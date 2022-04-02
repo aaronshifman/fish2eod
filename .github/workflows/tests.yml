@@ -19,11 +19,9 @@ on:
 jobs:
   pytest:
     strategy:
-      max-parallel: 1
-      fail-fast: false
       matrix:
         os: [ ubuntu-18.04, macos-latest ]
-        python-version: [ 3.9, 3.8, 3.7 ]
+        python-version: [ 3.7, 3.8, 3.9 ]
 
     runs-on: ${{ matrix.os }}
     defaults:
@@ -60,7 +58,7 @@ jobs:
           limit-access-to-actor: true
 
       - name: Run Tests
-        # I have no idea why running this test first is needed, something about memory (PR #1)
+        # Fork the tests to manage memory between tests (PR #1)
         run: |
           pytest --cov=./ --cov-report=xml --forked
 
