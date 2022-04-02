@@ -1,8 +1,6 @@
 # coding=UTF-8
 """Functions for creating and finite element meshes from geometry_primitives."""
-import os
 import tempfile
-from pathlib import Path
 from subprocess import Popen, PIPE
 
 import dolfin as df
@@ -13,10 +11,6 @@ from meshio import Mesh
 
 from fish2eod.geometry.primitives import Circle, Polygon
 from fish2eod.mesh.model_geometry import ModelGeometry
-
-GMSH_PATH = None
-if os.environ.get("READTHEDOCS"):
-    GMSH_PATH = Path(__file__).parent / "../../docs/source/gmsh"
 
 
 class Mesher:
@@ -138,10 +132,8 @@ def create_mesh(model_geometry: ModelGeometry, verbose: bool = True) -> df.Mesh:
     created_mesh = mesh_geometry.make_mesh()
     created_mesh.remove_lower_dimensional_cells()
     created_mesh.remove_orphaned_nodes()
-    # assert created_mesh.cells[-1].type == "triangle", "Something has changed in meshio: please submit a bug report"
-    # return create_dolfin_mesh(created_mesh.points, created_mesh.cells[-1].data)
 
-    triangles = [c.data for c in created_mesh.cells if c.type=='triangle']
+    triangles = [c.data for c in created_mesh.cells if c.type == 'triangle']
     return create_dolfin_mesh(created_mesh.points, np.vstack(triangles))
 
 
