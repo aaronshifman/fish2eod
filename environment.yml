@@ -12,7 +12,7 @@ dependencies:
   - pytables
   - h5py
   - matplotlib
-  - meshio<6
+  - meshio<5
   - numpy
   - scipy
   - pandas
