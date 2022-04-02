@@ -6,19 +6,9 @@ from fish2eod.xdmf.load import load_from_file
 from fish2eod.xdmf.save import Saver
 
 
-def test_write_read(tmp_path):
-    class mod(QESModel):
-        def create_geometry(self, **kwargs):
-            sq = Rectangle.from_center([0, 0], 3)
-            circ = Circle([0, 0], 0.5)
+def test_write_read(tmp_path, complex_geometry_model):
 
-            self.model_geometry.add_domain("bg", sq, sigma=1)
-            self.model_geometry.add_domain("act", circ, sigma=2)
-
-        def get_neumann_conditions(self, **kwargs):
-            return [BoundaryCondition(value=1, label=self.model_geometry["act"])]
-
-    model = mod()
+    model = complex_geometry_model()
     model.compile()
     model.solve()
 
