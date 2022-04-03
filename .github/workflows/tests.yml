@@ -68,12 +68,6 @@ jobs:
           name: coverage_report
           path: ./coverage.xml
 
-      - name: Build docs
-        if: matrix.os == 'ubuntu-18.04' && matrix.python-version == 3.8
-        run: |
-          make -C docs buildapi SPHINXOPTS="-W"
-          make -C docs html SPHINXOPTS="-W"
-
   upload-to-codecov:
     needs: pytest
     runs-on: ubuntu-18.04
