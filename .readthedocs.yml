@@ -11,9 +11,6 @@ conda:
 # Set the version of Python and other tools you might need
 build:
   apt_packages:
-    - pkg-config
-    - libhdf5-103
-    - libhdf5-dev
     - libglu1-mesa
   os: ubuntu-20.04
   tools:
