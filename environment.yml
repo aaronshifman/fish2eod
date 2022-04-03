@@ -23,5 +23,5 @@ dependencies:
   - dataclasses
   - pip
   - ipython
-  - sphinx_autodoc_typehints
+  - sphinx-autodoc-typehints
 
