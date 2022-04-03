@@ -3,10 +3,9 @@
 Compute the tdp for the left and right sides. Images are computed when the input has already been subtracted.
 """
 from itertools import product
-from typing import TYPE_CHECKING, Iterable, Tuple
+from typing import Iterable, Tuple
 
-if TYPE_CHECKING:  # avoid circular import during from typing
-    from fish2eod import BaseFishModel
+from fish2eod import models
 
 import numpy as np
 from scipy.interpolate import interp1d
@@ -43,13 +42,13 @@ def get_side_information(fish: Fish) -> Iterable[ComputatableSideInformation]:
         )
 
 
-def skin_potential(model: "BaseFishModel", side_information: ComputatableSideInformation):
+def skin_potential(model: "models.BaseFishModel", side_information: ComputatableSideInformation):
     v = [model(*c) for c in side_information.coordinates]
     voltage_on_skin = interp1d(np.linspace(0, 1, len(v)), v)
     return voltage_on_skin(np.linspace(0, 1, len(v)))
 
 
-def compute_transdermal_potential(model: "BaseFishModel") -> Iterable[Tuple[SkinStructure, TDP]]:
+def compute_transdermal_potential(model: "models.BaseFishModel") -> Iterable[Tuple[SkinStructure, TDP]]:
     """Compute the electric image.
 
     TODO refactor this
