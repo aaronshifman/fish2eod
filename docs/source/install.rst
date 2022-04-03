@@ -6,36 +6,6 @@ Installation
 Linux and MacOS
 ---------------
 
-gmsh
-****
-
-fish2eod requires *gmsh* to run, and requires **specifically version 3.0.6**
-
-Ubuntu
-++++++
-
-If you're on version 18.04 you can install gmsh with
-
-.. code-block:: bash
-
-    sudo apt-get install gmsh
-
-Otherwise you can download it from `here <https://gmsh.info/bin/Linux/>`__.
-
-MacOS
-+++++
-
-If you're on a mac you can download and install it from `here <http://gmsh.info/bin/MacOSX/>`__. or you can run the
-following
-
-.. code-block:: bash
-
-    wget http://gmsh.info/bin/MacOSX/gmsh-3.0.6-MacOSX.dmg -O gmsh.dmg
-    sudo hdiutil attach gmsh.dmg
-    sudo cp -R /Volumes/gmsh-3.0.6-MacOSX/Gmsh.app /Applications
-    sudo hdiutil unmount /Volumes/gmsh-3.0.6-MacOSX
-
-
 fish2eod
 ********
 
@@ -57,6 +27,16 @@ If you already have an environment you want to use you can just install fish2eod
 .. code-block:: bash
 
     conda install -c conda-forge fish2eod
+
+
+Ubuntu Libraries
+****************
+
+If you're on ubuntu you might some errors about missing libraries, you can install them through the package manager.
+
+.. code-block:: bash
+
+    sudo apt-get install libglu1-mesa
 
 
 Windows

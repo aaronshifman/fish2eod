@@ -11,9 +11,6 @@ conda:
 # Set the version of Python and other tools you might need
 build:
   apt_packages:
-    - pkg-config
-    - libhdf5-103
-    - libhdf5-dev
     - libglu1-mesa
   os: ubuntu-20.04
   tools:
@@ -22,6 +19,7 @@ build:
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
    configuration: docs/source/conf.py
+   fail_on_warning: true
 
 # If using Sphinx, optionally build your docs in additional formats such as PDF
 # formats:

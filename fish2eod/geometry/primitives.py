@@ -81,7 +81,7 @@ class Polygon(SubDomain):
     def mesh_representation(self) -> Iterable[Tuple[float, float, int]]:
         """Get the coordinates for the mesh.
 
-        pygmsh requires surfaces to be open and implicitly closes them so x and y return [:-1]
+        gmsh requires surfaces to be open and implicitly closes them so x and y return [:-1]
 
         :return: Iterable of (x,y,z) pairs: z=0
         """

@@ -71,14 +71,3 @@ apidoc_excluded_paths = ["test"]
 apidoc_separate_modules = True
 
 autosectionlabel_prefix_document = True
-
-if os.environ.get('READTHEDOCS'):
-    from pathlib import Path
-    from subprocess import Popen, PIPE
-
-    p = Popen(['bash', str(Path(__file__).parent / "../../.github/workflows/install_linux.sh")], stdin=PIPE, stdout=PIPE, stderr=PIPE)
-    output, err = p.communicate()
-    rc = p.returncode
-
-    sys.path.insert(0, Path(__file__).parent)
-
