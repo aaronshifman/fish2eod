@@ -26,12 +26,14 @@ Note that this can be very slow and we recommend installing with mamba.
 
 
 .. code-block:: bash
+
     conda install -c conda-forge mamba
     mamba install -c conda-forge fish2eod
 
 If you don't wish to use mamba you can install fish2eod the standard way
 
 .. code-block:: bash
+
     conda install -c conda-forge fish2eod
 
 
