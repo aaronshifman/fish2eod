@@ -20,19 +20,25 @@ supported on 3.7, 3.8, and 3.9
 
     conda create -n my_environment_name python=v
     conda activate my_environment_name
-    conda install -c conda-forge fish2eod
 
-If you already have an environment you want to use you can just install fish2eod
+Once your environment is set up, or if you already have an environment you want to use you can just install fish2eod.
+Note that this can be very slow and we recommend installing with mamba.
+
 
 .. code-block:: bash
+    conda install -c conda-forge mamba
+    mamba install -c conda-forge fish2eod
 
+If you don't wish to use mamba you can install fish2eod the standard way
+
+.. code-block:: bash
     conda install -c conda-forge fish2eod
 
 
 Ubuntu Libraries
 ****************
 
-If you're on ubuntu you might some errors about missing libraries, you can install them through the package manager.
+If you're on ubuntu you might get some errors about missing libraries, you can install them through the package manager.
 
 .. code-block:: bash
 
