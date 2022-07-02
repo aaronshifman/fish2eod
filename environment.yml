@@ -24,4 +24,8 @@ dependencies:
   - pip
   - ipython
   - sphinx-autodoc-typehints
+  - slepc<3.17
+  - slepc4py<3.17
+  - petsc<3.17
+  - petsc4py<3.17
 
