@@ -34,17 +34,20 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           environment-file: environment.yml
+          mamba-version: "*"
+          channels: conda-forge,defaults
+          channel-priority: true
           python-version: ${{ matrix.python-version }}
           auto-activate-base: false
 
       - name: Log Conda Environment
         run: |
-          conda info
-          conda list
+          mamba info
+          mamba list
 
       - name: Install Dependencies
         run: |
-          conda install pytest pytest-cov
+          mamba install pytest pytest-cov
           pip install pytest-forked
 
       - name: Install libglu1-mesa
